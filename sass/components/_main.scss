@@ -16,7 +16,7 @@ main {
                 border-radius: 25px;
                 flex: 0.5;
                 position: relative;
-                transition: 0.25s ease-in all;
+                transition: 0.2s ease-in all;
                 display: block;
                 cursor: pointer;
                 @include mixins.flex-container(row,space-between,center);
@@ -25,6 +25,7 @@ main {
                     height: 95%;
                     right: 4vh;
                     position: absolute;
+                    border-radius: 20px;
                 }
                 h1 {
                     display: block;
@@ -46,7 +47,11 @@ main {
                         font-size: 2.5rem;
                         margin-bottom: 2vh;
                     }
-                    p {
+                    h6 {
+                        font-size: 1.4rem;
+                    }
+                    p, i {
+                        color: rgb(215, 215, 215);
                         line-height: 200%;
                         font-size: 1.2rem;
                         a {
@@ -55,7 +60,7 @@ main {
                     }
                 }
                 &.active {
-                    flex: 10;
+                    flex: 15;
                     cursor: unset;
                     img {
                         display: block;
@@ -68,10 +73,11 @@ main {
                     }
                 }
                 &:nth-child(1) {
-                    background-color: #9e3030;
+                    background: rgb(176,115,99);
+                    background: linear-gradient(227deg, rgba(176,115,99,1) 0%, rgba(182,59,28,1) 48%, rgba(164,48,19,1) 100%);
                 }
                 &:nth-child(2) {
-                    background-color: aquamarine;
+                    background-color: rgb(108, 58, 108);
                 }
                 &:nth-child(3) {
                     background-color: lightsalmon;

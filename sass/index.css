@@ -65,7 +65,7 @@ main section.proyectos .option {
   border-radius: 25px;
   flex: 0.5;
   position: relative;
-  transition: 0.25s ease-in all;
+  transition: 0.2s ease-in all;
   display: block;
   cursor: pointer;
   display: flex;
@@ -78,6 +78,7 @@ main section.proyectos .option img {
   height: 95%;
   right: 4vh;
   position: absolute;
+  border-radius: 20px;
 }
 main section.proyectos .option h1 {
   display: block;
@@ -100,15 +101,19 @@ main section.proyectos .option div.info h2 {
   font-size: 2.5rem;
   margin-bottom: 2vh;
 }
-main section.proyectos .option div.info p {
+main section.proyectos .option div.info h6 {
+  font-size: 1.4rem;
+}
+main section.proyectos .option div.info p, main section.proyectos .option div.info i {
+  color: rgb(215, 215, 215);
   line-height: 200%;
   font-size: 1.2rem;
 }
-main section.proyectos .option div.info p a {
+main section.proyectos .option div.info p a, main section.proyectos .option div.info i a {
   font-size: 1.4rem;
 }
 main section.proyectos .option.active {
-  flex: 10;
+  flex: 15;
   cursor: unset;
 }
 main section.proyectos .option.active img {
@@ -121,10 +126,11 @@ main section.proyectos .option.active h1 {
   display: none;
 }
 main section.proyectos .option:nth-child(1) {
-  background-color: #9e3030;
+  background: rgb(176, 115, 99);
+  background: linear-gradient(227deg, rgb(176, 115, 99) 0%, rgb(182, 59, 28) 48%, rgb(164, 48, 19) 100%);
 }
 main section.proyectos .option:nth-child(2) {
-  background-color: aquamarine;
+  background-color: rgb(108, 58, 108);
 }
 main section.proyectos .option:nth-child(3) {
   background-color: lightsalmon;
