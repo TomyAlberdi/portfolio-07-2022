@@ -4,31 +4,77 @@ main {
     @include mixins.flex-container(column,flex-start,center);
     section {
         width: 100%;
+        border: 1px solid red;
         &.proyectos {
             @include mixins.flex-container(row,center,stretch);
             height: 80vh;
             padding: 5vh 2vh;
             .option {
-                padding: 2vh;
+                padding: 3vh;
                 margin: 0 0.3vw;
-                border: 1px solid green;
                 height: 70vh;
                 border-radius: 25px;
                 flex: 0.5;
-                cursor: pointer;
                 position: relative;
-                transition: 0.5s ease-in all;
+                transition: 0.25s ease-in all;
                 display: block;
-                white-space: nowrap;
-                h2 {
+                cursor: pointer;
+                @include mixins.flex-container(row,space-between,center);
+                img {
+                    display: none;
+                    height: 95%;
+                    right: 4vh;
+                    position: absolute;
+                }
+                h1 {
+                    display: block;
+                    position: absolute;
+                    top: 45%;
+                    left: 15%;
+                    width: 4vw;
+                    background-color: #161b2f;
+                    border-radius: 50%;
+                    text-align: center;
+                    font-size: 3rem;
+                }
+                div.info {
                     position: absolute;
                     display: none;
+                    height: 95%;
+                    width: 70%;
+                    h2 {
+                        font-size: 2.5rem;
+                        margin-bottom: 2vh;
+                    }
+                    p {
+                        line-height: 200%;
+                        font-size: 1.2rem;
+                        a {
+                            font-size: 1.4rem;
+                        }
+                    }
                 }
                 &.active {
-                    flex: 7;
-                    h2 {
+                    flex: 10;
+                    cursor: unset;
+                    img {
                         display: block;
                     }
+                    div.info {
+                        display: block;
+                    }
+                    h1 {
+                        display: none;
+                    }
+                }
+                &:nth-child(1) {
+                    background-color: #9e3030;
+                }
+                &:nth-child(2) {
+                    background-color: aquamarine;
+                }
+                &:nth-child(3) {
+                    background-color: lightsalmon;
                 }
             }
         }
