@@ -1,0 +1,35 @@
+@use "./mixins";
+
+header {
+    height: 12vh;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    // background-color: #384786;
+    @include mixins.flex-container(row, space-between, center);
+    div {
+        @include mixins.flex-container(row, flex-start, center);
+        a {
+            padding: 0 9vh;
+            text-decoration: none;
+            font-size: 1.3rem;
+            height: 12vh;
+            @extend .hover;
+            @include mixins.flex-container(row,flex-start,center);
+        }
+    }
+    a img {
+        @extend .hover;
+        height: 12vh;
+        padding: 1vh;
+    }
+}
+
+.hover:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    // background-color: #161b2f;
+    transition: all 0.3s ease-in;
+}

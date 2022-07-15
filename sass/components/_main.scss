@@ -1,0 +1,36 @@
+@use "./mixins";
+
+main {
+    @include mixins.flex-container(column,flex-start,center);
+    section {
+        width: 100%;
+        &.proyectos {
+            @include mixins.flex-container(row,center,stretch);
+            height: 80vh;
+            padding: 5vh 2vh;
+            .option {
+                padding: 2vh;
+                margin: 0 0.3vw;
+                border: 1px solid green;
+                height: 70vh;
+                border-radius: 25px;
+                flex: 0.5;
+                cursor: pointer;
+                position: relative;
+                transition: 0.5s ease-in all;
+                display: block;
+                white-space: nowrap;
+                h2 {
+                    position: absolute;
+                    display: none;
+                }
+                &.active {
+                    flex: 7;
+                    h2 {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

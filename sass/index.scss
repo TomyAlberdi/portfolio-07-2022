@@ -1,0 +1,16 @@
+@use "./components/header";
+@use "./components/main";
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+}
+body {
+    background-color: #293462;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
+}

@@ -8,11 +8,45 @@
         <!-- Link Íconos FontAwesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Archivos css -->
-        <link rel="stylesheet" href="./sass/main.css">
+        <link rel="stylesheet" href="./sass/index.css">
         <!-- Icon -->
         <link rel="icon" href="./img/favicon.ico">
     </head>
     <body>
-        <h1>ey</h1>
+        <header>
+            <div>
+                <a href="#">Sobre mí</a>
+                <a href="#">Proyectos</a>
+                <a href="#">Educación</a>
+                <a href="#">Contacto</a>
+            </div>
+            <a href="#"><img src="./img/favicon.ico" alt="Website Logo"></a>
+        </header>
+        <main>
+            <section class="about_me" id="about_me">
+                <h1>Sobre mí</h1>
+            </section>
+            <section class="proyectos" id="proyectos">
+                <article class="option active">
+                    <h2>Proyecto 1</h2>
+                </article>
+                <article class="option">
+                    <h2>Proyecto 2</h2>
+                </article>
+                <article class="option">
+                    <h2>Proyecto 3</h2>
+                </article>
+                <article class="option">
+                    <h2>Proyecto 4</h2>
+                </article>
+            </section>
+            <section class="educacion" id="educacion">
+                <h1>Educación</h1>
+            </section>
+            <section class="contact" id="contanct">
+                <h1>Contacto</h1>
+            </section>
+        </main>
+        <script src="./js/main.js"></script>
     </body>
 </html>
