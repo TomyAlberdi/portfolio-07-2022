@@ -19,6 +19,7 @@ main {
                 transition: 0.2s ease-in all;
                 display: block;
                 cursor: pointer;
+                white-space: nowrap;
                 @include mixins.flex-container(row,space-between,center);
                 img {
                     display: none;
@@ -54,18 +55,17 @@ main {
                         color: rgb(215, 215, 215);
                         line-height: 200%;
                         font-size: 1.2rem;
-                        a {
-                            font-size: 1.4rem;
-                        }
+                    }
+                    a {
+                        font-size: 1.4rem;
+                        line-height: 200%;
+                        color: white;
                     }
                 }
                 &.active {
                     flex: 15;
                     cursor: unset;
-                    img {
-                        display: block;
-                    }
-                    div.info {
+                    img, div.info, .vinyl {
                         display: block;
                     }
                     h1 {
@@ -77,12 +77,50 @@ main {
                     background: linear-gradient(227deg, rgba(176,115,99,1) 0%, rgba(182,59,28,1) 48%, rgba(164,48,19,1) 100%);
                 }
                 &:nth-child(2) {
-                    background-color: rgb(108, 58, 108);
+                    background-image: linear-gradient( 109.6deg,  rgba(118,12,99,1) 11.2%, rgba(71,11,75,1) 98.6% );
                 }
                 &:nth-child(3) {
                     background-color: lightsalmon;
                 }
             }
         }
+    }
+}
+
+.vinyl {
+    position: absolute;
+    right: 3vw;
+    display: none;
+    animation: rotate-center 4s linear infinite both;
+    width: 320px;
+    height: 320px;
+    margin: 19px auto;
+    border-radius: 50%;
+    background: 
+    linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, .85) 40%) no-repeat 100% 0,
+    linear-gradient(60deg, rgba(42, 41, 40, .85) 60%, transparent 60%) no-repeat 0 100%,
+    repeating-radial-gradient(#2a2928, #2a2928 4px, #ada9a0 5px, #2a2928 6px);
+    background-size: 50% 100%, 100% 50%, 100% 100%;
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -35px;
+        border: solid 1px #d9a388;
+        width: 68px; height: 68px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px #da5b33,
+          inset 0 0 0 27px #da5b33;
+        background: #b5ac9a;
+        content: '';
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

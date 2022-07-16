@@ -68,6 +68,7 @@ main section.proyectos .option {
   transition: 0.2s ease-in all;
   display: block;
   cursor: pointer;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -109,17 +110,16 @@ main section.proyectos .option div.info p, main section.proyectos .option div.in
   line-height: 200%;
   font-size: 1.2rem;
 }
-main section.proyectos .option div.info p a, main section.proyectos .option div.info i a {
+main section.proyectos .option div.info a {
   font-size: 1.4rem;
+  line-height: 200%;
+  color: white;
 }
 main section.proyectos .option.active {
   flex: 15;
   cursor: unset;
 }
-main section.proyectos .option.active img {
-  display: block;
-}
-main section.proyectos .option.active div.info {
+main section.proyectos .option.active img, main section.proyectos .option.active div.info, main section.proyectos .option.active .vinyl {
   display: block;
 }
 main section.proyectos .option.active h1 {
@@ -130,12 +130,56 @@ main section.proyectos .option:nth-child(1) {
   background: linear-gradient(227deg, rgb(176, 115, 99) 0%, rgb(182, 59, 28) 48%, rgb(164, 48, 19) 100%);
 }
 main section.proyectos .option:nth-child(2) {
-  background-color: rgb(108, 58, 108);
+  background-image: linear-gradient(109.6deg, rgb(118, 12, 99) 11.2%, rgb(71, 11, 75) 98.6%);
 }
 main section.proyectos .option:nth-child(3) {
   background-color: lightsalmon;
 }
 
+.vinyl {
+  position: absolute;
+  right: 3vw;
+  display: none;
+  -webkit-animation: rotate-center 4s linear infinite both;
+          animation: rotate-center 4s linear infinite both;
+  width: 320px;
+  height: 320px;
+  margin: 19px auto;
+  border-radius: 50%;
+  background: linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, 0.85) 40%) no-repeat 100% 0, linear-gradient(60deg, rgba(42, 41, 40, 0.85) 60%, transparent 60%) no-repeat 0 100%, repeating-radial-gradient(#2a2928, #2a2928 4px, #ada9a0 5px, #2a2928 6px);
+  background-size: 50% 100%, 100% 50%, 100% 100%;
+}
+.vinyl::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px;
+  border: solid 1px #d9a388;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #da5b33, inset 0 0 0 27px #da5b33;
+  background: #b5ac9a;
+  content: "";
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
