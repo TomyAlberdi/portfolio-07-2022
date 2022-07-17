@@ -7,10 +7,22 @@ main {
         width: 100%;
         border: 1px solid red;
         &.proyectos div.intro_proyectos {
-            border: 1px solid green;
             width: 50%;
             height: 80vh;
+            border: 1px solid green;
+            padding: 0 2vw;
+            line-height: 1.8rem;
+            @include mixins.flex-container(column,flex-start,center);
         }
+    }
+    .titulo {
+        width: fit-content;
+        background-color: rgba(0, 0, 0, 0.3);
+        font-size: 2rem;
+        border-radius: 30px;
+        text-align: center;
+        padding: 0.5vw 3vw;
+        margin-bottom: 2vh;
     }
 }
 

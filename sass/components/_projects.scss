@@ -17,15 +17,6 @@ section.proyectos {
     width: calc(100% - 100px);
 
     height: 80vh;
-
-    @for $i from 1 through 4 {
-      @media screen and (max-width: 798px - $i*80) {
-        min-width: 600px - $i * 80;
-        .option:nth-child(#{6-$i}) {
-          display: none;
-        }
-      }
-    }
   }
   .option {
     position: relative;
