@@ -43,17 +43,18 @@ header a img {
 
 section.proyectos {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
   overflow: hidden;
   height: 90vh;
   transition: 0.25s;
 }
 section.proyectos .options {
   display: flex;
-  flex-direction: row;
   align-items: stretch;
+  flex-direction: row;
+  justify-content: flex-start;
   overflow: hidden;
   min-width: 600px;
   max-width: 900px;
@@ -131,9 +132,9 @@ section.proyectos .option .label {
 }
 section.proyectos .option .label .icon {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   min-width: 40px;
   max-width: 40px;
   height: 40px;
@@ -155,6 +156,10 @@ section.proyectos .option .label .data {
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
 section.proyectos .option .label .info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
