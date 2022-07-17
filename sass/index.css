@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
 header {
+  z-index: 10;
   height: 12vh;
   position: -webkit-sticky;
   position: sticky;
@@ -40,100 +41,166 @@ header a img {
   transition: all 0.3s ease-in;
 }
 
-main {
+section.proyectos {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
+  overflow: hidden;
+  height: 90vh;
+  transition: 0.25s;
 }
-main section {
-  width: 100%;
-  border: 1px solid red;
-}
-main section.proyectos {
+section.proyectos .options {
   display: flex;
+  flex-direction: row;
   align-items: stretch;
-  flex-direction: row;
-  justify-content: center;
+  overflow: hidden;
+  min-width: 600px;
+  max-width: 900px;
+  width: calc(100% - 100px);
   height: 80vh;
-  padding: 5vh 2vh;
 }
-main section.proyectos .option {
-  padding: 3vh;
-  margin: 0 0.3vw;
-  height: 70vh;
-  border-radius: 25px;
-  flex: 0.5;
+@media screen and (max-width: 718px) {
+  section.proyectos .options {
+    min-width: 520px;
+  }
+  section.proyectos .options .option:nth-child(5) {
+    display: none;
+  }
+}
+@media screen and (max-width: 638px) {
+  section.proyectos .options {
+    min-width: 440px;
+  }
+  section.proyectos .options .option:nth-child(4) {
+    display: none;
+  }
+}
+@media screen and (max-width: 558px) {
+  section.proyectos .options {
+    min-width: 360px;
+  }
+  section.proyectos .options .option:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 478px) {
+  section.proyectos .options {
+    min-width: 280px;
+  }
+  section.proyectos .options .option:nth-child(2) {
+    display: none;
+  }
+}
+section.proyectos .option {
   position: relative;
-  transition: 0.2s ease-in all;
-  display: block;
+  overflow: hidden;
+  min-width: 60px;
+  margin: 10px;
+  padding: 3vh 3vh 0 3vh;
   cursor: pointer;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-main section.proyectos .option img {
-  display: none;
-  height: 95%;
-  right: 4vh;
-  position: absolute;
-  border-radius: 20px;
-}
-main section.proyectos .option h1 {
-  display: block;
-  position: absolute;
-  top: 45%;
-  left: 15%;
-  width: 4vw;
-  background-color: #161b2f;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 3rem;
-}
-main section.proyectos .option div.info {
-  position: absolute;
-  display: none;
-  height: 95%;
-  width: 70%;
-}
-main section.proyectos .option div.info h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2vh;
-}
-main section.proyectos .option div.info h6 {
-  font-size: 1.4rem;
-}
-main section.proyectos .option div.info p, main section.proyectos .option div.info i {
-  color: rgb(215, 215, 215);
-  line-height: 200%;
-  font-size: 1.2rem;
-}
-main section.proyectos .option div.info a {
-  font-size: 1.4rem;
-  line-height: 200%;
-  color: white;
-}
-main section.proyectos .option.active {
-  flex: 15;
-  cursor: unset;
-}
-main section.proyectos .option.active img, main section.proyectos .option.active div.info, main section.proyectos .option.active .vinyl {
-  display: block;
-}
-main section.proyectos .option.active h1 {
-  display: none;
-}
-main section.proyectos .option:nth-child(1) {
+section.proyectos .option:nth-child(1) {
   background: rgb(176, 115, 99);
   background: linear-gradient(227deg, rgb(176, 115, 99) 0%, rgb(182, 59, 28) 48%, rgb(164, 48, 19) 100%);
 }
-main section.proyectos .option:nth-child(2) {
-  background-image: linear-gradient(109.6deg, rgb(118, 12, 99) 11.2%, rgb(71, 11, 75) 98.6%);
+section.proyectos .option:nth-child(2) {
+  background: rgb(81, 50, 82);
+  background: linear-gradient(13deg, rgb(81, 50, 82) 0%, rgb(122, 64, 105) 48%, rgb(202, 78, 121) 100%);
 }
-main section.proyectos .option:nth-child(3) {
-  background-color: lightsalmon;
+section.proyectos .option:nth-child(3) {
+  background: rgb(95, 113, 97);
+  background: linear-gradient(200deg, rgb(95, 113, 97) 0%, rgb(109, 139, 116) 48%, rgb(108, 98, 86) 100%);
+}
+section.proyectos .option:nth-child(4) {
+  background: rgb(58, 56, 69);
+  background: linear-gradient(49deg, rgb(58, 56, 69) 17%, rgb(250, 217, 230) 100%);
+}
+section.proyectos .option:nth-child(5) {
+  background: rgb(141, 141, 170);
+  background: linear-gradient(13deg, rgb(141, 141, 170) 48%, rgb(132, 121, 225) 100%);
+}
+section.proyectos .option.active {
+  flex-grow: 10000;
+  transform: scale(1);
+  max-width: 600px;
+  margin: 0px;
+  border-radius: 20px;
+  background-size: auto 100%;
+}
+section.proyectos .option.active .label {
+  bottom: 20px;
+  left: 20px;
+}
+section.proyectos .option.active .label .info > h1 {
+  left: 0px;
+  opacity: 1;
+}
+section.proyectos .option.active .label .data {
+  opacity: 1;
+}
+section.proyectos .option:not(.active) {
+  flex-grow: 1;
+  border-radius: 30px;
+}
+section.proyectos .option:not(.active) .label {
+  bottom: 10px;
+  left: 10px;
+}
+section.proyectos .option:not(.active) .label .info > h1 {
+  left: 20px;
+  opacity: 0;
+}
+section.proyectos .option:not(.active) .label .data {
+  opacity: 0;
+}
+section.proyectos .option .label {
+  position: absolute;
+  right: 0px;
+  height: 75vh;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+section.proyectos .option .label .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+}
+section.proyectos .option .label .icon h1 {
+  color: black;
+}
+section.proyectos .option .label .title {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+section.proyectos .option .label .data {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+section.proyectos .option .label .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  color: white;
+  white-space: pre;
+}
+section.proyectos .option .label .info > h1 {
+  position: relative;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+section.proyectos .option .label .info h1 {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .vinyl {
@@ -180,6 +247,22 @@ main section.proyectos .option:nth-child(3) {
     transform: rotate(360deg);
   }
 }
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+main section {
+  width: 100%;
+  border: 1px solid red;
+}
+main section.proyectos div.intro_proyectos {
+  border: 1px solid green;
+  width: 50%;
+  height: 80vh;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

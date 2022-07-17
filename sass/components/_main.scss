@@ -1,126 +1,16 @@
 @use "./mixins";
+@use "./projects";
 
 main {
     @include mixins.flex-container(column,flex-start,center);
     section {
         width: 100%;
         border: 1px solid red;
-        &.proyectos {
-            @include mixins.flex-container(row,center,stretch);
+        &.proyectos div.intro_proyectos {
+            border: 1px solid green;
+            width: 50%;
             height: 80vh;
-            padding: 5vh 2vh;
-            .option {
-                padding: 3vh;
-                margin: 0 0.3vw;
-                height: 70vh;
-                border-radius: 25px;
-                flex: 0.5;
-                position: relative;
-                transition: 0.2s ease-in all;
-                display: block;
-                cursor: pointer;
-                white-space: nowrap;
-                @include mixins.flex-container(row,space-between,center);
-                img {
-                    display: none;
-                    height: 95%;
-                    right: 4vh;
-                    position: absolute;
-                    border-radius: 20px;
-                }
-                h1 {
-                    display: block;
-                    position: absolute;
-                    top: 45%;
-                    left: 15%;
-                    width: 4vw;
-                    background-color: #161b2f;
-                    border-radius: 50%;
-                    text-align: center;
-                    font-size: 3rem;
-                }
-                div.info {
-                    position: absolute;
-                    display: none;
-                    height: 95%;
-                    width: 70%;
-                    h2 {
-                        font-size: 2.5rem;
-                        margin-bottom: 2vh;
-                    }
-                    h6 {
-                        font-size: 1.4rem;
-                    }
-                    p, i {
-                        color: rgb(215, 215, 215);
-                        line-height: 200%;
-                        font-size: 1.2rem;
-                    }
-                    a {
-                        font-size: 1.4rem;
-                        line-height: 200%;
-                        color: white;
-                    }
-                }
-                &.active {
-                    flex: 15;
-                    cursor: unset;
-                    img, div.info, .vinyl {
-                        display: block;
-                    }
-                    h1 {
-                        display: none;
-                    }
-                }
-                &:nth-child(1) {
-                    background: rgb(176,115,99);
-                    background: linear-gradient(227deg, rgba(176,115,99,1) 0%, rgba(182,59,28,1) 48%, rgba(164,48,19,1) 100%);
-                }
-                &:nth-child(2) {
-                    background-image: linear-gradient( 109.6deg,  rgba(118,12,99,1) 11.2%, rgba(71,11,75,1) 98.6% );
-                }
-                &:nth-child(3) {
-                    background-color: lightsalmon;
-                }
-            }
         }
     }
 }
 
-.vinyl {
-    position: absolute;
-    right: 3vw;
-    display: none;
-    animation: rotate-center 4s linear infinite both;
-    width: 320px;
-    height: 320px;
-    margin: 19px auto;
-    border-radius: 50%;
-    background: 
-    linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, .85) 40%) no-repeat 100% 0,
-    linear-gradient(60deg, rgba(42, 41, 40, .85) 60%, transparent 60%) no-repeat 0 100%,
-    repeating-radial-gradient(#2a2928, #2a2928 4px, #ada9a0 5px, #2a2928 6px);
-    background-size: 50% 100%, 100% 50%, 100% 100%;
-    &::after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -35px;
-        border: solid 1px #d9a388;
-        width: 68px; height: 68px;
-        border-radius: 50%;
-        box-shadow: 0 0 0 4px #da5b33,
-          inset 0 0 0 27px #da5b33;
-        background: #b5ac9a;
-        content: '';
-    }
-}
-
-@keyframes rotate-center {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
