@@ -1,79 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio Tomás Alberdi</title>
-        <!-- Link Íconos FontAwesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Archivos css -->
-        <link rel="stylesheet" href="./sass/index.css">
-        <!-- Icon -->
-        <link rel="icon" href="./img/favicon.ico">
-    </head>
-    <body>
-        <header>
-            <div>
-                <a href="#">Sobre mí</a>
-                <a href="#">Proyectos</a>
-                <a href="#">Educación</a>
-                <a href="#">Contacto</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Tomás Alberdi</title>
+    <!-- Link Íconos FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Archivos css -->
+    <link rel="stylesheet" href="./sass/index.css" />
+    <!-- Icon -->
+    <link rel="icon" href="./img/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="#">Sobre mí</a>
+        <a href="#">Proyectos</a>
+        <a href="#">Educación</a>
+        <a href="#">Contacto</a>
+      </div>
+      <a href="#"><img src="./img/favicon.ico" alt="Website Logo" /></a>
+    </header>
+    <main>
+      <section class="about_me" id="about_me">
+        <h1>Sobre mí</h1>
+      </section>
+      <section class="proyectos" id="proyectos">
+        <div class="intro_proyectos">
+			<h2 class="titulo">Proyectos</h2>
+			<p>
+				Una muestra de 5 proyectos que desarrollé a lo largo de los años mientra me formaba
+				como developer. <br>
+			</p>
+        </div>
+        <div class="options">
+          <div class="option active">
+            <div class="label">
+              <div class="data">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <br />
+                  Quisque eu hendrerit risus, eget varius mi. Etiam tempor
+                  fermentum <br />
+                  fermentum. Sed turpis dui, ullamcorper non <br />
+                  diam eget, fermentum dignissim nisl. Donec condimentum <br />
+                  quis mi sit amet gravida. Duis id posuere diam. Maecenas vitae
+                  <br />
+                  tincidunt leo, et posuere magna. Donec ultricies <br />
+                  laoreet augue, eget sodales ipsum fermentum vitae. <br />
+                  Cras a pretium sem, vitae vulputate ligula. Sed a magna nisl.
+                  <br />
+                  Phasellus quis tristique magna.
+                </p>
+              </div>
+              <div class="title">
+                <div class="icon">
+                  <h1>1</h1>
+                </div>
+                <div class="info">
+                  <h1>Proyecto 1</h1>
+                </div>
+              </div>
             </div>
-            <a href="#"><img src="./img/favicon.ico" alt="Website Logo"></a>
-        </header>
-        <main>
-            <section class="about_me" id="about_me">
-                <h1>Sobre mí</h1>
-            </section>
-            <section class="proyectos" id="proyectos">
-                <article class="option">
-                    <div class="info">
-                        <h2>Manage Landing Page</h2>
-                        <h6>Landing page genérica para una empresa.</h6><br>
-                        <p>
-                            Desarrollada en vanilla HTML y CSS como parte del proyecto final de la materia <br>
-                            Front End 1 de la carrera Certified Tech Developer, en Digital House. <br>
-                            Adaptable a dispositivos móviles mediante el método de desarrollo <i>mobile first</i>. <br>
-                        </p><br>
-                        <a href="https://github.com/TomyAlberdi/Manage-Page" target="_blank">Repositorio de GitHub</a><br>
-                        <a href="https://tomyalberdi.github.io/Manage-Page/" target="_blank">Página Web</a>
-                    </div>
-                    <img src="./img/captura_manage-page.jpeg" alt="Captura de manage landing page">
-                    <h1>1</h1>
-                </article>
-                <article class="option active">
-                    <div class="info">
-                        <h2>Registro de música</h2>
-                        <h6>Página web utilizada para guardar información de mis álbumes favoritos.</h6><br>
-                        <p>
-                            Mi primer proyecto desarrollado con vanilla HTML y SASS, incluye dos páginas <br>
-                            con información de mis álbumes preferidos. <br>
-                            Esta información incluye título, artista, año, y puntaje. Además, incluye canciones <br> favoritas y
-                            menos preferidas del último álbum registrado y el álbum con mayor puntaje. <br>
-                            Cuenta con animaciones y transisiones para las portadas de los álbumes. <br>
-                        </p><br>
-                        <a href="https://github.com/TomyAlberdi/Diary" target="_blank">Repositorio de GitHub</a><br>
-                        <a href="https://tomyalberdi.github.io/Diary/" target="_blank">Página Web</a>
-                    </div>
-                    <div class="vinyl"></div>
-                    <h1>2</h1>
-                </article>
-                <article class="option">
-                    <div class="info">
-                        <h2>Proyecto 3</h2>
-                        <p>Descripción proyecto 3</p>
-                    </div>
-                    <h1>3</h1>
-                </article>
-            </section>
-            <section class="educacion" id="educacion">
-                <h1>Educación</h1>
-            </section>
-            <section class="contact" id="contanct">
-                <h1>Contacto</h1>
-            </section>
-        </main>
-        <script src="./js/main.js"></script>
-    </body>
+          </div>
+          <div class="option">
+            <div class="label">
+              <div class="data">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <br />
+                  Quisque eu hendrerit risus, eget varius mi. Etiam tempor
+                  fermentum <br />
+                  fermentum. Sed turpis dui, ullamcorper non <br />
+                  diam eget, fermentum dignissim nisl. Donec condimentum <br />
+                  quis mi sit amet gravida. Duis id posuere diam. Maecenas vitae
+                  <br />
+                  tincidunt leo, et posuere magna. Donec ultricies <br />
+                  laoreet augue, eget sodales ipsum fermentum vitae. <br />
+                  Cras a pretium sem, vitae vulputate ligula. Sed a magna nisl.
+                  <br />
+                  Phasellus quis tristique magna.
+                </p>
+              </div>
+              <div class="title">
+                <div class="icon">
+                  <h1>2</h1>
+                </div>
+                <div class="info">
+                  <h1>Proyecto 2</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="option">
+            <div class="label">
+              <div class="data">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <br />
+                  Quisque eu hendrerit risus, eget varius mi. Etiam tempor
+                  fermentum <br />
+                  fermentum. Sed turpis dui, ullamcorper non <br />
+                  diam eget, fermentum dignissim nisl. Donec condimentum <br />
+                  quis mi sit amet gravida. Duis id posuere diam. Maecenas vitae
+                  <br />
+                  tincidunt leo, et posuere magna. Donec ultricies <br />
+                  laoreet augue, eget sodales ipsum fermentum vitae. <br />
+                  Cras a pretium sem, vitae vulputate ligula. Sed a magna nisl.
+                  <br />
+                  Phasellus quis tristique magna.
+                </p>
+              </div>
+              <div class="title">
+                <div class="icon">
+                  <h1>3</h1>
+                </div>
+                <div class="info">
+                  <h1>Proyecto 3</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="option">
+            <div class="label">
+              <div class="data">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <br />
+                  Quisque eu hendrerit risus, eget varius mi. Etiam tempor
+                  fermentum <br />
+                  fermentum. Sed turpis dui, ullamcorper non <br />
+                  diam eget, fermentum dignissim nisl. Donec condimentum <br />
+                  quis mi sit amet gravida. Duis id posuere diam. Maecenas vitae
+                  <br />
+                  tincidunt leo, et posuere magna. Donec ultricies <br />
+                  laoreet augue, eget sodales ipsum fermentum vitae. <br />
+                  Cras a pretium sem, vitae vulputate ligula. Sed a magna nisl.
+                  <br />
+                  Phasellus quis tristique magna.
+                </p>
+              </div>
+              <div class="title">
+                <div class="icon">
+                  <h1>4</h1>
+                </div>
+                <div class="info">
+                  <h1>Proyecto 4</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="option">
+            <div class="label">
+              <div class="data">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <br />
+                  Quisque eu hendrerit risus, eget varius mi. Etiam tempor
+                  fermentum <br />
+                  fermentum. Sed turpis dui, ullamcorper non <br />
+                  diam eget, fermentum dignissim nisl. Donec condimentum <br />
+                  quis mi sit amet gravida. Duis id posuere diam. Maecenas vitae
+                  <br />
+                  tincidunt leo, et posuere magna. Donec ultricies <br />
+                  laoreet augue, eget sodales ipsum fermentum vitae. <br />
+                  Cras a pretium sem, vitae vulputate ligula. Sed a magna nisl.
+                  <br />
+                  Phasellus quis tristique magna.
+                </p>
+              </div>
+              <div class="title">
+                <div class="icon">
+                  <h1>5</h1>
+                </div>
+                <div class="info">
+                  <h1>Proyecto 5</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="educacion" id="educacion">
+        <h1>Educación</h1>
+      </section>
+      <section class="contact" id="contanct">
+        <h1>Contacto</h1>
+      </section>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

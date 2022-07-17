@@ -1,0 +1,211 @@
+@use "./mixins";
+
+section.proyectos {
+  @include mixins.flex-container(row,space-around,center);
+  overflow: hidden;
+  height: 90vh;
+  transition: 0.25s;
+  .options {
+    @include mixins.flex-container(row,flex-start,stretch);
+    overflow: hidden;
+
+    min-width: 600px;
+    max-width: 900px;
+    width: calc(100% - 100px);
+
+    height: 80vh;
+  }
+  .option {
+    position: relative;
+    overflow: hidden;
+
+    min-width: 60px;
+    margin: 10px;
+    padding: 3vh 3vh 0 3vh;
+    &:nth-child(1) {
+      background: rgb(176, 115, 99);
+      background: linear-gradient(
+        227deg,
+        rgba(176, 115, 99, 1) 0%,
+        rgba(182, 59, 28, 1) 48%,
+        rgba(164, 48, 19, 1) 100%
+      );
+    }
+    &:nth-child(2) {
+      background: rgb(81, 50, 82);
+      background: linear-gradient(
+        13deg,
+        rgba(81, 50, 82, 1) 0%,
+        rgba(122, 64, 105, 1) 48%,
+        rgba(202, 78, 121, 1) 100%
+      );
+    }
+    &:nth-child(3) {
+      background: rgb(95, 113, 97);
+      background: linear-gradient(
+        200deg,
+        rgba(95, 113, 97, 1) 0%,
+        rgba(109, 139, 116, 1) 48%,
+        rgba(108, 98, 86, 1) 100%
+      );
+    }
+    &:nth-child(4) {
+      background: rgb(58, 56, 69);
+      background: linear-gradient(
+        49deg,
+        rgba(58, 56, 69, 1) 17%,
+        rgba(250, 217, 230, 1) 100%
+      );
+    }
+    &:nth-child(5) {
+      background: rgb(141, 141, 170);
+      background: linear-gradient(
+        13deg,
+        rgba(141, 141, 170, 1) 48%,
+        rgba(132, 121, 225, 1) 100%
+      );
+    }
+
+    cursor: pointer;
+
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+    &.active {
+      flex-grow: 10000;
+      transform: scale(1);
+
+      max-width: 600px;
+      margin: 0px;
+      border-radius: 20px;
+
+      background-size: auto 100%;
+
+      .label {
+        bottom: 20px;
+        left: 20px;
+        .info > h1 {
+          left: 0px;
+          opacity: 1;
+        }
+        .data {
+          opacity: 1;
+        }
+      }
+    }
+    &:not(.active) {
+      flex-grow: 1;
+
+      border-radius: 30px;
+
+      .label {
+        bottom: 10px;
+        left: 10px;
+        .info > h1 {
+          left: 20px;
+          opacity: 0;
+        }
+        .data {
+          opacity: 0;
+        }
+      }
+    }
+
+    .label {
+      position: absolute;
+      right: 0px;
+
+      height: 75vh;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      .icon {
+        @include mixins.flex-container(row,center,center);
+
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        border-radius: 100%;
+
+        background-color: white;
+        h1 {
+          color: black;
+        }
+      }
+      .title {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+      }
+      .data {
+        white-space: nowrap;
+        position: absolute;
+        top: 0;
+        transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+      }
+      .info {
+        @include mixins.flex-container(column,center,center);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-left: 10px;
+
+        color: white;
+
+        white-space: pre;
+        > h1 {
+          position: relative;
+
+          transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
+            opacity 0.5s ease-out;
+        }
+        h1 {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.vinyl {
+  position: absolute;
+  right: 3vw;
+  display: none;
+  animation: rotate-center 4s linear infinite both;
+  width: 320px;
+  height: 320px;
+  margin: 19px auto;
+  border-radius: 50%;
+  background: linear-gradient(
+        30deg,
+        transparent 40%,
+        rgba(42, 41, 40, 0.85) 40%
+      )
+      no-repeat 100% 0,
+    linear-gradient(60deg, rgba(42, 41, 40, 0.85) 60%, transparent 60%)
+      no-repeat 0 100%,
+    repeating-radial-gradient(#2a2928, #2a2928 4px, #ada9a0 5px, #2a2928 6px);
+  background-size: 50% 100%, 100% 50%, 100% 100%;
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -35px;
+    border: solid 1px #d9a388;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #da5b33, inset 0 0 0 27px #da5b33;
+    background: #b5ac9a;
+    content: "";
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
