@@ -1,0 +1,5 @@
+@use "./mixins";
+
+.contact {
+    @include mixins.flex-container(row,space-between,center);
+}

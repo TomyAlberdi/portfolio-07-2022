@@ -9,9 +9,22 @@
     font-family: 'Be Vietnam Pro', sans-serif;
     color: white;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 12vh;
+}
 body {
     background-color: #293462;
     overscroll-behavior-y: none;
     overscroll-behavior-x: none;
     overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: inherit;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);
 }
