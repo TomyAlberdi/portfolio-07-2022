@@ -16,6 +16,11 @@ section.proyectos {
     height: 83vh;
   }
   .option {
+    &:hover {
+      transform: scale(1.03);
+      transition: 0.7s ease all;
+      transition-delay: 0s;
+    }
     position: relative;
     overflow: hidden;
 

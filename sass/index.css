@@ -70,6 +70,11 @@ section.proyectos .option {
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
+section.proyectos .option:hover {
+  transform: scale(1.03);
+  transition: 0.7s ease all;
+  transition-delay: 0s;
+}
 section.proyectos .option:nth-child(1) {
   background: rgb(176, 115, 99);
   background: linear-gradient(227deg, rgb(176, 115, 99) 0%, rgb(182, 59, 28) 48%, rgb(164, 48, 19) 100%);
@@ -252,7 +257,7 @@ section.proyectos .option .label .info h1 {
   transition: 0.7s ease all;
 }
 .contact div.links a:hover, .contact div.links button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.7s ease all;
   transition-delay: 0s;
 }
@@ -297,11 +302,13 @@ main section.proyectos div.intro_proyectos {
   width: 50%;
   height: 83vh;
   padding: 0 2vw;
-  line-height: 1.8rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
+}
+main section.proyectos div.intro_proyectos p {
+  line-height: 1.8rem;
 }
 main .titulo {
   width: -webkit-fit-content;
@@ -313,6 +320,9 @@ main .titulo {
   text-align: center;
   padding: 0.4vw 3vw;
   margin-bottom: 2vh;
+}
+main .shadow {
+  box-shadow: 6px 8px 16px 0px rgba(66, 83, 152, 0.61);
 }
 
 * {
