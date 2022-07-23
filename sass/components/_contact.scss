@@ -17,16 +17,25 @@
             border: none;
             cursor: pointer;
             border-radius: 25px;
-            text-align: center;
             padding: 1vw;
-            @include mixins.flex-container(row,space-between,center);
+            @include mixins.flex-container(row,center,center);
             text-decoration: none;
+            position: relative;
+            transition: 0.7s ease all;
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.7s ease all;
+                transition-delay: 0s;
+            }
             i {
                 font-size: 3rem;
+                position: absolute;
+                left: 1vw;
             }
+            
             h3 {
                 font-size: 2rem;
-                margin-right: 35%;
+                text-align: center;
             }
         }
         .div1 { 

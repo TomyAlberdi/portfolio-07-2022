@@ -242,20 +242,28 @@ section.proyectos .option .label .info h1 {
   border: none;
   cursor: pointer;
   border-radius: 25px;
-  text-align: center;
   padding: 1vw;
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   text-decoration: none;
+  position: relative;
+  transition: 0.7s ease all;
+}
+.contact div.links a:hover, .contact div.links button:hover {
+  transform: scale(1.1);
+  transition: 0.7s ease all;
+  transition-delay: 0s;
 }
 .contact div.links a i, .contact div.links button i {
   font-size: 3rem;
+  position: absolute;
+  left: 1vw;
 }
 .contact div.links a h3, .contact div.links button h3 {
   font-size: 2rem;
-  margin-right: 35%;
+  text-align: center;
 }
 .contact div.links .div1 {
   grid-area: 1/1/2/2;
