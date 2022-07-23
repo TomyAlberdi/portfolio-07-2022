@@ -21,10 +21,10 @@
   <body>
     <header>
       <div>
-        <a href="#">Sobre mí</a>
+        <a href="#about_me">Sobre mí</a>
         <a href="#proyectos">Proyectos</a>
-        <a href="#">Educación</a>
-        <a href="#">Contacto</a>
+        <a href="#educacion">Educación</a>
+        <a href="#contact">Contacto</a>
       </div>
       <a href="#"><img src="./img/favicon.ico" alt="Website Logo" /></a>
     </header>
@@ -190,13 +190,26 @@
       <section class="educacion" id="educacion">
         <h2 class="titulo">Educación</h2>
       </section>
-      <section class="contact" id="contanct">
-        <div class="intro_contacto">
+      <section class="contact" id="contact">
           <h2 class="titulo">Contacto</h2>
-        </div>
-        <div class="links_contacto">
-          <h2>eyyy</h2>
-        </div>
+          <div class="links">
+            <a class="div1" href="https://github.com/TomyAlberdi" target="_blank">
+              <i class="fa-brands fa-github"></i>
+              <h3>GitHub</h3>
+            </a>
+            <a class="div2" href="https://www.linkedin.com/in/tom%C3%A1s-alberdi-42150a219/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+              <h3>LinkedIn</h3>
+            </a>
+            <button class="div3" onclick="copyMail()" target="_blank">
+              <i class="fa-solid fa-envelope"></i>
+              <h3>Email</h3>
+            </button>
+            <a class="div4" href="https://wa.me/+542214181379" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h3>WhatsApp</h3>
+            </a>
+          </div>
       </section>
     </main>
     <script src="./js/main.js"></script>

@@ -12,3 +12,8 @@ proyectos.forEach(item => {
         item.classList.add('active')
     })
 })
+
+function copyMail() {
+    navigator.clipboard.writeText("tomas.alberdi.2001@gmail.com");
+    alert("Email copiado.");
+}

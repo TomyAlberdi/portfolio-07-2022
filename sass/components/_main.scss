@@ -6,9 +6,9 @@ main {
     @include mixins.flex-container(column,flex-start,center);
     section {
         width: 100%;
+        padding: 2vh 0;
         border: solid 1px red;
         &.proyectos div.intro_proyectos {
-            border: solid 1px green;
             width: 50%;
             height: 83vh;
             padding: 0 2vw;
