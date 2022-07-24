@@ -322,7 +322,7 @@ main .titulo {
   margin-bottom: 2vh;
 }
 main .shadow {
-  box-shadow: 6px 8px 16px 0px rgba(66, 83, 152, 0.61);
+  box-shadow: 6px 8px 16px 0px rgba(58, 73, 134, 0.61);
 }
 
 * {
