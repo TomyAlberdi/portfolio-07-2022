@@ -1,0 +1,15 @@
+@use "./mixins";
+
+.habilidades {
+    @include mixins.flex-container(column,center,center);
+    article {
+        width: 100%;
+        height: 40vh;
+        &:nth-child(2) {
+            background-color: lightcoral;
+        }
+        &:nth-child(3) {
+            background-color: aquamarine;
+        }
+    }
+}

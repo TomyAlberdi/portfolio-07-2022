@@ -19,6 +19,7 @@
             border-radius: 25px;
             padding: 1vw;
             @include mixins.flex-container(row,center,center);
+            @include mixins.shadow(rgba(90, 81, 108, 0.3));
             text-decoration: none;
             position: relative;
             transition: 0.7s ease all;

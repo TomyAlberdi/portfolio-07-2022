@@ -3,7 +3,6 @@
 section.proyectos {
   @include mixins.flex-container(row,space-around,center);
   overflow: hidden;
-  height: 90vh;
   transition: 0.25s;
   .options {
     @include mixins.flex-container(row,flex-start,stretch);
