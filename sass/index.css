@@ -348,6 +348,7 @@ main section {
   margin: 1vh 0;
   background-color: #222b51;
   width: 96%;
+  border-radius: 15px;
 }
 main section.proyectos div.intro_proyectos {
   height: 83vh;
@@ -373,6 +374,11 @@ main .titulo {
   width: fit-content;
 }
 
+footer {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 30vh;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -383,7 +389,7 @@ main .titulo {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 12vh;
+  scroll-padding-top: 14vh;
 }
 
 body {
