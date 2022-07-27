@@ -2,25 +2,32 @@
 
 .habilidades {
     @include mixins.flex-container(column,center,center);
+    background-color: inherit;
+    padding: 0;
     article {
-        width: 98%;
-        height: 50vh;
         border-radius: 15px;
+        height: 50vh;
+        width: 100%;
         h3 {
             font-size: 1.7rem;
             margin: 2vh;
         }
+        p {
+            padding: 0 2vh;
+        }
         &:nth-child(1) {
             background-color: #355764;
             margin-bottom: 2vh;
+            @include mixins.shadow(#222b51);
         }
         &:nth-child(2) {
             @include mixins.flex-container(row,space-between,center);
             gap: 2vh;
             div {
-                width: 98%;
-                height: 50vh;
                 border-radius: 15px;
+                height: 50vh;
+                width: 98%;
+                @include mixins.shadow(#222b51);
                 &:nth-child(1) {
                     background-color: #5A8F7B;
                 }

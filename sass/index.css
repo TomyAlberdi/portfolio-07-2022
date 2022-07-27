@@ -229,6 +229,7 @@ section.proyectos .option .label .info h1 {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 2vh;
 }
 .contact .titulo {
   font-size: 2.3rem;
@@ -292,19 +293,25 @@ section.proyectos .option .label .info h1 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background-color: inherit;
+  padding: 0;
 }
 .habilidades article {
-  width: 98%;
-  height: 50vh;
   border-radius: 15px;
+  height: 50vh;
+  width: 100%;
 }
 .habilidades article h3 {
   font-size: 1.7rem;
   margin: 2vh;
 }
+.habilidades article p {
+  padding: 0 2vh;
+}
 .habilidades article:nth-child(1) {
   background-color: #355764;
   margin-bottom: 2vh;
+  box-shadow: 6px 8px 16px 0px #222b51;
 }
 .habilidades article:nth-child(2) {
   display: flex;
@@ -314,15 +321,20 @@ section.proyectos .option .label .info h1 {
   gap: 2vh;
 }
 .habilidades article:nth-child(2) div {
-  width: 98%;
-  height: 50vh;
   border-radius: 15px;
+  height: 50vh;
+  width: 98%;
+  box-shadow: 6px 8px 16px 0px #222b51;
 }
 .habilidades article:nth-child(2) div:nth-child(1) {
   background-color: #5A8F7B;
 }
 .habilidades article:nth-child(2) div:nth-child(2) {
   background-color: #921b80;
+}
+
+.about_me {
+  margin-top: 2vh;
 }
 
 main {
@@ -333,9 +345,9 @@ main {
 }
 main section {
   padding: 2vh 0;
-  margin: 2vh 0;
+  margin: 1vh 0;
   background-color: #222b51;
-  width: 98%;
+  width: 96%;
 }
 main section.proyectos div.intro_proyectos {
   height: 83vh;

@@ -2,14 +2,15 @@
 @use "./projects";
 @use "./contact";
 @use "./habilities";
+@use "./abtme";
 
 main {
     @include mixins.flex-container(column,flex-start,center);
     section {
         padding: 2vh 0;
-        margin: 2vh 0;
+        margin: 1vh 0;
         background-color: #222b51;
-        width: 98%;
+        width: 96%;
         &.proyectos div.intro_proyectos {
             height: 83vh;
             width: 30%;
