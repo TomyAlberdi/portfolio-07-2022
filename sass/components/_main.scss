@@ -6,13 +6,13 @@
 main {
     @include mixins.flex-container(column,flex-start,center);
     section {
-        border: solid 1px red;
         padding: 2vh 0;
-        width: 100%;
+        margin: 2vh 0;
+        background-color: #222b51;
+        width: 98%;
         &.proyectos div.intro_proyectos {
             height: 83vh;
-            padding: 0 2vw;
-            width: 50%;
+            width: 30%;
             @include mixins.flex-container(column,center,center);
             p {
                 line-height: 1.8rem;

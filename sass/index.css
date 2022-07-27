@@ -294,14 +294,35 @@ section.proyectos .option .label .info h1 {
   justify-content: center;
 }
 .habilidades article {
-  width: 100%;
-  height: 40vh;
+  width: 98%;
+  height: 50vh;
+  border-radius: 15px;
+}
+.habilidades article h3 {
+  font-size: 1.7rem;
+  margin: 2vh;
+}
+.habilidades article:nth-child(1) {
+  background-color: #355764;
+  margin-bottom: 2vh;
 }
 .habilidades article:nth-child(2) {
-  background-color: lightcoral;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2vh;
 }
-.habilidades article:nth-child(3) {
-  background-color: aquamarine;
+.habilidades article:nth-child(2) div {
+  width: 98%;
+  height: 50vh;
+  border-radius: 15px;
+}
+.habilidades article:nth-child(2) div:nth-child(1) {
+  background-color: #5A8F7B;
+}
+.habilidades article:nth-child(2) div:nth-child(2) {
+  background-color: #921b80;
 }
 
 main {
@@ -311,14 +332,14 @@ main {
   justify-content: flex-start;
 }
 main section {
-  border: solid 1px red;
   padding: 2vh 0;
-  width: 100%;
+  margin: 2vh 0;
+  background-color: #222b51;
+  width: 98%;
 }
 main section.proyectos div.intro_proyectos {
   height: 83vh;
-  padding: 0 2vw;
-  width: 50%;
+  width: 30%;
   display: flex;
   align-items: center;
   flex-direction: column;
