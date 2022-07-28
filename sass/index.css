@@ -235,16 +235,24 @@ section.proyectos .option .label .info h1 {
 .contact .titulo {
   font-size: 2.3rem;
 }
-.contact div.links {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 2vw;
-  grid-row-gap: 2vw;
+.contact div.main_contacto {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: inherit;
+  gap: 10vw;
 }
-.contact div.links a, .contact div.links button {
-  height: 10vh;
-  width: 35vw;
+.contact div.links {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2vh;
+}
+.contact div.links a {
+  height: 9vh;
+  width: 30vw;
   border: none;
   cursor: pointer;
   border-radius: 25px;
@@ -258,35 +266,69 @@ section.proyectos .option .label .info h1 {
   position: relative;
   transition: 0.7s ease all;
 }
-.contact div.links a:hover, .contact div.links button:hover {
+.contact div.links a:hover {
   transform: scale(1.05);
   transition: 0.7s ease all;
   transition-delay: 0s;
 }
-.contact div.links a i, .contact div.links button i {
-  font-size: 3rem;
+.contact div.links a i {
+  font-size: 2.6rem;
   position: absolute;
   left: 1vw;
 }
-.contact div.links a h3, .contact div.links button h3 {
+.contact div.links a h3 {
   font-size: 2rem;
   text-align: center;
 }
 .contact div.links .div1 {
-  grid-area: 1/1/2/2;
   background-color: #171515;
 }
 .contact div.links .div2 {
-  grid-area: 1/2/2/3;
   background-color: #0e76a8;
 }
 .contact div.links .div3 {
-  grid-area: 2/1/3/2;
-  background-color: #8d140f;
-}
-.contact div.links .div4 {
-  grid-area: 2/2/3/3;
   background-color: #075e54;
+}
+.contact form.gform {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vh;
+}
+.contact form.gform fieldset {
+  width: 30vw;
+  border: none;
+}
+.contact form.gform fieldset input, .contact form.gform fieldset textarea {
+  height: 7vh;
+  width: inherit;
+  font-size: 1.3rem;
+  color: black;
+  padding: 0 0 0 1vw;
+  border-radius: 10px;
+  border: none;
+}
+.contact form.gform fieldset input[type=submit], .contact form.gform fieldset textarea[type=submit] {
+  padding: none;
+  cursor: pointer;
+}
+.contact form.gform fieldset input::-moz-placeholder, .contact form.gform fieldset textarea::-moz-placeholder {
+  margin-left: 8vw;
+}
+.contact form.gform fieldset input:-ms-input-placeholder, .contact form.gform fieldset textarea:-ms-input-placeholder {
+  margin-left: 8vw;
+}
+.contact form.gform fieldset input::placeholder, .contact form.gform fieldset textarea::placeholder {
+  margin-left: 8vw;
+}
+.contact form.gform fieldset textarea {
+  resize: none;
+  height: 15vh;
+  padding: 6vh 0 6vh 1vw;
+}
+.contact form.gform fieldset textarea::-webkit-scrollbar {
+  display: none;
 }
 
 .habilidades {

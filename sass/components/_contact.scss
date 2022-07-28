@@ -6,15 +6,17 @@
     .titulo {
         font-size: 2.3rem;
     }
+    div.main_contacto {
+        @include mixins.flex-container(row,center,center);
+        width: inherit;
+        gap: 10vw; 
+    }
     div.links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 2vw;
-        grid-row-gap: 2vw;
-        a, button {
-            height: 10vh;
-            width: 35vw;
+        @include mixins.flex-container(column,space-evenly,center);
+        gap: 2vh;
+        a {
+            height: 9vh;
+            width: 30vw;
             border: none;
             cursor: pointer;
             border-radius: 25px;
@@ -30,7 +32,7 @@
                 transition-delay: 0s;
             }
             i {
-                font-size: 3rem;
+                font-size: 2.6rem;
                 position: absolute;
                 left: 1vw;
             }
@@ -41,20 +43,46 @@
             }
         }
         .div1 { 
-            grid-area: 1 / 1 / 2 / 2; 
             background-color: #171515;
         }
         .div2 { 
-            grid-area: 1 / 2 / 2 / 3; 
             background-color: #0e76a8;
         }
         .div3 { 
-            grid-area: 2 / 1 / 3 / 2; 
-            background-color: #8d140f;
-        }
-        .div4 { 
-            grid-area: 2 / 2 / 3 / 3; 
             background-color: #075e54;
+        }
+    }
+    form.gform {
+        @include mixins.flex-container(column,center,center);
+        gap: 1vh;
+        fieldset {
+            width: 30vw;
+            border: none;
+            input {
+                height: 7vh;
+                width: inherit;
+                font-size: 1.3rem;
+                color: black;
+                padding: 0 0 0 1vw;
+                border-radius: 10px;
+                border: none;
+                &[type="submit"] {
+                    padding: none;
+                    cursor: pointer;
+                }
+                &::placeholder {
+                    margin-left: 8vw;
+                }
+            }
+            textarea {
+                @extend input;
+                resize: none;
+                height: 15vh;
+                padding: 6vh 0 6vh 1vw;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
         }
     }
 }
