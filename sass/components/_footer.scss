@@ -1,6 +1,22 @@
 @use "./mixins";
 
 footer {
+    @include mixins.flex-container(row,center,center);
     background-color: rgba(0, 0, 0, 0.3);
-    height: 30vh;
+    height: 8vh;
+    ul {
+        list-style-type: none;
+        @include mixins.flex-container(row,center,center);
+        li {
+            &::after {
+                content: "•";
+                margin: 0 6px;
+            }
+            &:nth-last-child(1) {
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
 }
